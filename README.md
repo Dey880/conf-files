@@ -25,6 +25,13 @@ How to use
 2. Review any snippets before merging into your own configuration files. These files are personal and may contain assumptions specific to the original environment.
 3. For the VS Code settings, you can either paste the relevant JSON into a workspace `settings.json` or use it as a starting point for a small extension.
 
+Prerequisites
+-------------
+
+- The highlight rules require the VS Code extension "Highlight" by Fabio Spampinato (`fabiospampinato.vscode-highlight`). Install it from the Marketplace for `highlight.regexes` to take effect.
+- The file association uses the Material Icon Theme by PKief (`PKief.material-icon-theme`) so icons display correctly for `*.notes` files. This is optional but recommended.
+
+
 Notes and cautions
 -----------------
 

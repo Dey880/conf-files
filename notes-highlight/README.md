@@ -10,6 +10,10 @@ How to use
 - Copy the contents of `settings.json` into a workspace or user `settings.json` (for example, `.vscode/settings.json` in a workspace) to enable the highlights for your notes files.
 - You can also use the file as a starting point if you build a small VS Code extension that registers highlight rules.
 
+Prerequisites
+- The highlight rules in `settings.json` require the "Highlight" extension by Fabio Spampinato (`fabiospampinato.vscode-highlight`). Install it from the VS Code Marketplace for the `highlight.regexes` settings to work.
+- For the `*.notes` file association and icons, the Material Icon Theme (`PKief.material-icon-theme`) is used — install it if you want matching icons.
+
 Customization
 - Change colors and `decorations` to suit your theme.
 - Modify or add regexes inside `highlight.regexes` to target other patterns. Remove or edit `filterFileRegex` if you want the rules to apply to other file types.
