@@ -1,0 +1,73 @@
+{
+  "material-icon-theme.files.associations": {
+    "*.notes": "yaml"
+  },
+
+  "highlight.regexes": {
+    // If done
+    "(.+?)\\s*:\\s*done": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#00ff00", "fontWeight": "bold" }]
+    },
+    // If todo
+    "(.+?)\\s*:\\s*todo": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#ff0000", "fontWeight": "bold" }]
+    },
+    // If in progress
+    "(.+?)\\s*:\\s*in\\sprogress": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#ffff00", "fontWeight": "bold" }]
+    },
+
+    // Coord location before colon
+    "(.+?)\\s*:\\s*-?\\d+,\\s*-?\\d+": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#1e90ff", "fontWeight": "bold" }]
+    },
+    // Coords
+    "(\\s*-?\\d+(?:,\\s*-?\\d+){1,2})": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#ff9900" }]
+    },
+
+    // Amount item before colon
+    "(.+?)\\s*:\\s*\\d+\\s*:\\s*\\d+": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#ffffff", "fontWeight": "bold" }]
+    },
+    // Amount
+    "(?<=:\\s*\\d+\\s*):\\s*\\d+": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#00ff00", "fontWeight": "bold" }]
+    },
+
+    // Link descriptor
+    "(.+?)\\s*:\\s*http": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#1e90ff", "fontWeight": "bold" }]
+    },
+    // Link
+    "(http\\S+)": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#6e3faf" }]
+    },
+
+    // Shopping
+    "(.+?)\\s*:\\s*\\d+": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#ffffff", "fontWeight": "bold" }]
+    },
+    // Shopping digit
+    "(\\s\\d+)": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#00ff00", "fontWeight": "bold" }]
+    },
+
+    // Nested stuff
+    "(.+?)\\s*:\\r?\\n": {
+      "filterFileRegex": "\\.notes$",
+      "decorations": [{ "color": "#ffffff", "fontWeight": "bold" }]
+    }
+  }
+}

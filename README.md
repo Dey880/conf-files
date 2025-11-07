@@ -1,76 +1,39 @@
-# Custom .bashrc Configuration
+## conf-files
 
-A personalized `.bashrc` script with quality-of-life improvements, styling, and useful aliases to enhance your Bash shell experience with focus on git.
+This repository contains small configuration files and snippets I keep for system and editor setup. It is intentionally lightweight — just a couple of folders with single-purpose config files you can copy or adapt.
 
----
+Structure
+---------
 
-## Features
+- `bashrc/` — shell configuration files and notes
+	- `.bashrc` — personal Bash startup file. Copy or merge snippets you like into your own shell configuration (be careful if you already have existing settings).
+	- `README.md` — notes about the bashrc folder and any usage hints.
 
-- Improved history management and command completion
-- Colorful and informative prompt showing user, host, path, Git branch, and Python virtual environment
-- Handy aliases for everyday commands (e.g., `please` for `sudo`, `gs` for `git status`)
-- Safety features like interactive `rm`, `cp`, and `mv`
-- Automatic command suggestions with [thefuck](https://github.com/nvbn/thefuck) integration (if installed)
-- Support for `fastfetch` or `neofetch` on terminal start
-- Colored `ls` output and enhanced man page appearance
-- Auto-correct command suggestions and autocompletion with arrow keys
-- Environment variables configured for better terminal usability
+- `notes-highlight/` — lightweight config folder with highlight rules for `.notes` files
+  - `settings.json` — sample settings for a small VS Code highlight ruleset (targets `*.notes` files). You can paste these into a workspace `settings.json` or adapt them for an extension.
 
----
+What you'll find here
+---------------------
 
-## Installation
+- Small, copy-ready configuration snippets for personal use.
+- No build steps — these are plain text configuration files intended to be read and copied as needed.
 
-1. Backup your existing `.bashrc`:
+How to use
+----------
 
-   ```bash
-   cp ~/.bashrc ~/.bashrc.backup
-   ```
+1. Browse the folders and open the files you need (for example, open `bashrc/.bashrc` to inspect shell customizations).
+2. Review any snippets before merging into your own configuration files. These files are personal and may contain assumptions specific to the original environment.
+3. For the VS Code settings, you can either paste the relevant JSON into a workspace `settings.json` or use it as a starting point for a small extension.
 
-2. Replace your `.bashrc` with this custom configuration:
+Notes and cautions
+-----------------
 
-   ```bash
-   curl -o ~/.bashrc https://raw.githubusercontent.com/Dey880/dotfiles/refs/heads/main/.bashrc
-   ```
-
-   *(Or copy-paste the content manually)*
-
-3. Reload your shell:
-
-   ```bash
-   source ~/.bashrc
-   ```
+- These files are configuration snippets, not packaged installers. Always back up your current configuration before applying changes.
+- Line endings and permissions can matter when copying `.bashrc` to a non-Unix environment. Convert line endings and verify executable bits where appropriate.
 
 ---
 
-## Usage
-
-- Use aliases like `please` instead of `sudo`
-- Navigate directories quickly with `..` and `...`
-- Run `update` to upgrade your system packages
-- Enjoy automatic Git branch display and virtual environment indication in your prompt
-- Type commands with confidence using history search (`Up` arrow) and auto-correction suggestions
-
----
-
-## Custom Functions
-
-- `parse_git_branch`: Displays the current Git branch in the prompt
-- `parse_venv`: Shows active Python virtual environment in the prompt
-
----
-
-## Notes
-
-- Requires `dircolors` and optionally `thefuck`, `fastfetch`, or `neofetch`
-- Tested on Debian-based system (Ubuntu 22 Jammy); some features may require adjustments for other distributions
-- Feel free to customize aliases and prompt styles to your preference
-
----
-
-## License
-
-This `.bashrc` configuration is open for personal use and modification. No warranties provided.
-
----
-
-*Enjoy your enhanced Bash shell!*
+Files included (summary)
+- `bashrc/.bashrc` — Bash startup file with customizations
+- `bashrc/README.md` — notes for the bashrc folder
+- `notes-highlight/settings.json` — VS Code highlight settings

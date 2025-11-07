@@ -130,7 +130,6 @@ fi
 echo
 
 # Aliases
-alias please='sudo'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias update='sudo apt update -y && sudo apt upgrade -y'
