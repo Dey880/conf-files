@@ -44,3 +44,5 @@ Files included (summary)
 - `bashrc/.bashrc` — Bash startup file with customizations
 - `bashrc/README.md` — notes for the bashrc folder
 - `notes-highlight/settings.json` — VS Code highlight settings
+- `notes-highlight/README.md` — notes for the notes-highlight folder
+- `notes-highlight/examples/example.notes` — example file to show the different stylings

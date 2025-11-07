@@ -18,6 +18,12 @@ Customization
 - Change colors and `decorations` to suit your theme.
 - Modify or add regexes inside `highlight.regexes` to target other patterns. Remove or edit `filterFileRegex` if you want the rules to apply to other file types.
 
+Example
+- The `example.notes` file is included for the purpose of showing the different styling included
+  
+  ![Image of example.notes with styling added](https://files.catbox.moe/7nhgx3.png)
+
+
 Notes
 - This is a snippet — review it before applying to avoid conflicts with existing settings.
 - If you want the rules to apply to a different extension (for example `.txt`), change `filterFileRegex` accordingly.

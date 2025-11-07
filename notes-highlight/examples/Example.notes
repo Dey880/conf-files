@@ -1,0 +1,16 @@
+todo not started   : todo
+todo in progress   : in progress
+todo done          : done
+
+coords(1)          : 100, 50, 25
+coords(2)          : 50, 25
+
+amount             : 100 : 50
+
+list               : 100
+
+link               : https://google.com
+
+nested stuff :
+    something      : todo
+    something else : done
