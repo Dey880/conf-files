@@ -51,7 +51,7 @@ A lightweight and functional `.bashrc` configuration for **Ubuntu 24.04**, desig
 2. Replace it with the new configuration (example using `curl`):
 
    ```bash
-   curl -o ~/.bashrc https://raw.githubusercontent.com/<yourusername>/<yourrepo>/main/.bashrc
+   curl -o ~/.bashrc https://raw.githubusercontent.com/Dey880/conf-files/refs/heads/main/bashrc/.bashrc
    ```
 
    *(Or copy and paste the provided **``** content manually.)*
