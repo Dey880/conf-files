@@ -10,7 +10,6 @@ A personalized `.bashrc` script with quality-of-life improvements, styling, and 
 - Colorful and informative prompt showing user, host, path, Git branch, and Python virtual environment
 - Handy aliases for everyday commands (e.g., `please` for `sudo`, `gs` for `git status`)
 - Safety features like interactive `rm`, `cp`, and `mv`
-- Automatic command suggestions with [thefuck](https://github.com/nvbn/thefuck) integration (if installed)
 - Support for `fastfetch` or `neofetch` on terminal start
 - Colored `ls` output and enhanced man page appearance
 - Auto-correct command suggestions and autocompletion with arrow keys
@@ -60,7 +59,7 @@ A personalized `.bashrc` script with quality-of-life improvements, styling, and 
 
 ## Notes
 
-- Requires `dircolors` and optionally `thefuck`, `fastfetch`, or `neofetch`
+- Requires `dircolors` and optionally `fastfetch`, or `neofetch`
 - Tested on Debian-based system (Ubuntu 22 Jammy); some features may require adjustments for other distributions
 - Feel free to customize aliases and prompt styles to your preference
 
