@@ -166,11 +166,6 @@ parse_venv() {
 
 PS1='\[\e[38;5;81m\]\u@\h\[\e[0m\]:\[\e[38;5;190m\]\w\[\e[0m\]\[\e[38;5;208m\]$(parse_git_branch)\[\e[0m\] \[\e[38;5;114m\]$(parse_venv)\[\e[0m\]\n\$ '
 
-# Enable auto-correction suggestions if thefuck is installed
-if command -v thefuck &> /dev/null; then
-  eval "$(thefuck --alias)"
-fi
-
 # Command history & completion tweaks
 shopt -s histappend
 shopt -s cdspell
