@@ -29,7 +29,7 @@ A personalized `.bashrc` script with quality-of-life improvements, styling, and 
 2. Replace your `.bashrc` with this custom configuration:
 
    ```bash
-   curl -o ~/.bashrc https://raw.githubusercontent.com/Dey880/dotfiles/refs/heads/main/.bashrc
+   curl -o ~/.bashrc https://raw.githubusercontent.com/Dey880/conf-files/refs/heads/main/bashrc/.bashrc
    ```
 
    *(Or copy-paste the content manually)*
