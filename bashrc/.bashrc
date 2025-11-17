@@ -51,7 +51,7 @@ parse_git_branch() {
 # Prompt
 # --------------------------------------------------------------------
 
-export PS1="\n${BOLD}${CYAN}\u${RESET}@${MAGENTA}\h${RESET} ${DIM}in${RESET} ${BOLD}${BLUE}\w${RESET}\$(parse_git_branch)\n${YELLOW}╰─>${RESET} "
+PS1="\n\[${BOLD}${CYAN}\]\u\[${RESET}\]@\[${MAGENTA}\]\h\[${RESET}\] ${DIM}in\[${RESET}\] \[${BOLD}${BLUE}\]\w\[${RESET}\]\$(parse_git_branch)\n\[${YELLOW}\]╰─>\[${RESET}\] "
 
 # --------------------------------------------------------------------
 # Aliases
