@@ -5,69 +5,72 @@
 
   "highlight.regexes": {
     // If done
-    "(.+?)\\s*:\\s*done": {
+    "(\\s*)(.+?)\\s*:\\s*done": {
       "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#00ff00", "fontWeight": "bold" }]
+      "decorations": [{}, { "color": "#00ff00", "fontWeight": "bold" }]
     },
     // If todo
-    "(.+?)\\s*:\\s*todo": {
+    "(\\s*)(.+?)\\s*:\\s*todo": {
       "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#ff0000", "fontWeight": "bold" }]
+      "decorations": [{}, { "color": "#ff0000", "fontWeight": "bold" }]
     },
     // If in progress
-    "(.+?)\\s*:\\s*in\\sprogress": {
+    "(\\s*)(.+?)\\s*:\\s*in\\sprogress": {
       "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#ffff00", "fontWeight": "bold" }]
+      "decorations": [{}, { "color": "#ffff00", "fontWeight": "bold" }]
     },
 
-    // Coord location before colon
-    "(.+?)\\s*:\\s*-?\\d+,\\s*-?\\d+": {
+    // Coordinates
+    "(\\s*)(.+?)(\\s*:\\s*)*(-?\\d+(?:,\\s*-?\\d+){1,2})": {
       "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#1e90ff", "fontWeight": "bold" }]
-    },
-    // Coords
-    "(\\s*-?\\d+(?:,\\s*-?\\d+){1,2})": {
-      "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#ff9900" }]
-    },
-
-    // Amount item before colon
-    "(.+?)\\s*:\\s*\\d+\\s*:\\s*\\d+": {
-      "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#ffffff", "fontWeight": "bold" }]
-    },
-    // Amount
-    "(?<=:\\s*\\d+\\s*):\\s*\\d+": {
-      "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#00ff00", "fontWeight": "bold" }]
+      "decorations": [
+        {},
+        { "color": "#1e90ff", "fontWeight": "bold" },
+        {},
+        { "color": "#ff9900" }
+      ]
     },
 
-    // Link descriptor
-    "(.+?)\\s*:\\s*http": {
+    // Amount & List
+    "(\\s*)([^\\s]+)(\\s*:\\s*)(\\d+)(\\s*:\\s*)(\\d+)$": {
       "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#1e90ff", "fontWeight": "bold" }]
+      "regexFlags": "gm",
+      "decorations": [
+        {},
+        { "color": "#ffffff", "fontWeight": "bold" },
+        {},
+        { "color": "#00ff00", "fontWeight": "bold" },
+        {},
+        { "color": "#00ff00", "fontWeight": "bold" }
+      ]
     },
+    "(\\s*)([^\\s]+)(\\s*:\\s*)(\\d+)$": {
+      "filterFileRegex": "\\.notes$",
+      "regexFlags": "gm",
+      "decorations": [
+        {},
+        { "color": "#ffffff", "fontWeight": "bold" },
+        {},
+        { "color": "#00ff00", "fontWeight": "bold" }
+      ]
+    },
+
     // Link
-    "(http\\S+)": {
+    "(\\s*)(.+?)(\\s*:\\s*)(http\\S+)": {
       "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#6e3faf" }]
-    },
-
-    // Shopping
-    "(.+?)\\s*:\\s*\\d+": {
-      "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#ffffff", "fontWeight": "bold" }]
-    },
-    // Shopping digit
-    "(\\s\\d+)": {
-      "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#00ff00", "fontWeight": "bold" }]
+      "decorations": [
+        {},
+        { "color": "#1e90ff", "fontWeight": "bold" },
+        {},
+        { "color": "#6e3faf" }
+      ]
     },
 
     // Nested stuff
-    "(.+?)\\s*:\\r?\\n": {
+    "(\\s*)(.+?)\\s*:\\r?\\n": {
       "filterFileRegex": "\\.notes$",
-      "decorations": [{ "color": "#ffffff", "fontWeight": "bold" }]
+      "regexFlags": "gm",
+      "decorations": [{}, { "color": "#ffffff", "fontWeight": "bold" }]
     }
   }
 }
