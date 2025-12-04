@@ -1,20 +1,42 @@
 # Custom .bashrc Configuration
 
-A personalized `.bashrc` script with quality-of-life improvements, styling, and useful aliases to enhance your Bash shell experience with focus on git.
+A lightweight and functional `.bashrc` configuration for **Ubuntu 24.04**, designed to make the Bash shell more efficient, informative, and pleasant to use, especially for users who work frequently with Git.
 
 ---
 
 ## Features
 
-- Improved history management and command completion
-- Colorful and informative prompt showing user, host, path, Git branch, and Python virtual environment
-- Handy aliases for everyday commands (e.g., `please` for `sudo`, `gs` for `git status`)
-- Safety features like interactive `rm`, `cp`, and `mv`
-- Automatic command suggestions with [thefuck](https://github.com/nvbn/thefuck) integration (if installed)
-- Support for `fastfetch` or `neofetch` on terminal start
-- Colored `ls` output and enhanced man page appearance
-- Auto-correct command suggestions and autocompletion with arrow keys
-- Environment variables configured for better terminal usability
+- **Clean, informative prompt**
+
+  - Shows user, host, working directory, and active Git branch.
+  - Uses color for clarity without excessive styling.
+
+- **Quality-of-life aliases**
+
+  - Shortcuts for navigation, system updates, Git commands, and common utilities.
+
+- **Git-aware prompt**
+
+  - Displays the current branch and indicates if the repository has uncommitted changes.
+
+- **Automatic dependency detection**
+
+  - Adapts behavior if `git`, `lsd`, `batcat`, or `fzf` are installed.
+
+- **Enhanced history management**
+
+  - Large, persistent command history that avoids duplicates and syncs between sessions.
+
+- **Optional utilities integration**
+
+  - `lsd`: improved `ls` output
+  - `batcat`: colorized replacement for `cat`
+  - `fzf`: fuzzy directory navigation
+  - `dircolors`: ensures consistent colored output
+
+- **Minimal welcome message**
+
+  - Clears the screen and shows a short greeting with the current date for interactive shells.
 
 ---
 
@@ -26,13 +48,13 @@ A personalized `.bashrc` script with quality-of-life improvements, styling, and 
    cp ~/.bashrc ~/.bashrc.backup
    ```
 
-2. Replace your `.bashrc` with this custom configuration:
+2. Replace it with the new configuration (example using `curl`):
 
    ```bash
-   curl -o ~/.bashrc https://raw.githubusercontent.com/Dey880/dotfiles/refs/heads/main/.bashrc
+   curl -o ~/.bashrc https://raw.githubusercontent.com/Dey880/conf-files/refs/heads/main/bashrc/.bashrc
    ```
 
-   *(Or copy-paste the content manually)*
+   *(Or copy and paste the provided **``** content manually.)*
 
 3. Reload your shell:
 
@@ -44,32 +66,58 @@ A personalized `.bashrc` script with quality-of-life improvements, styling, and 
 
 ## Usage
 
-- Navigate directories quickly with `..` and `...`
-- Run `update` to upgrade your system packages
-- Enjoy automatic Git branch display and virtual environment indication in your prompt
-- Type commands with confidence using history search (`Up` arrow) and auto-correction suggestions
+- `..`, `...`, `....` — Move up directory levels quickly.
+- `update` — Update and upgrade system packages (`sudo apt update && sudo apt upgrade -y`).
+- Git shortcuts:
+  - `gs` → `git status`
+  - `ga` → `git add`
+  - `gc` → `git commit -m`
+  - `gp` → `git push`
+  - `gl` → one-line decorated Git log
+- `extract <file>` — Unpack various archive formats.
+- If `fzf` is installed: `fd` — fuzzy directory jump.
 
 ---
 
 ## Custom Functions
 
-- `parse_git_branch`: Displays the current Git branch in the prompt
-- `parse_venv`: Shows active Python virtual environment in the prompt
+- **`parse_git_branch`**
+  - Shows the active Git branch and marks the working tree as dirty when there are uncommitted changes.
+
+- **`extract`**
+  - Detects and extracts common archive types (`.zip`, `.tar.gz`, `.7z`, etc.).
+
+- **`fd`** *(optional, requires `fzf`)*
+  - Fuzzy directory navigation helper.
+
+---
+
+## Dependencies
+
+| Dependency  | Purpose                                  | Required                      |
+| ----------- | ---------------------------------------- | ----------------------------- |
+| `git`       | Git branch display and aliases           | Yes                           |
+| `lsd`       | Improved directory listings              | Optional                      |
+| `batcat`    | Colored file viewing (`cat` replacement) | Optional                      |
+| `fzf`       | Interactive fuzzy directory navigation   | Optional                      |
+| `dircolors` | Color support for `ls`                   | Optional (commonly available) |
 
 ---
 
 ## Notes
 
-- Requires `dircolors` and optionally `thefuck`, `fastfetch`, or `neofetch`
-- Tested on Debian-based system (Ubuntu 22 Jammy); some features may require adjustments for other distributions
-- Feel free to customize aliases and prompt styles to your preference
+- Built and tested on **Ubuntu 24.04 LTS**.
+- Works on most Debian-based systems with Bash 5+.
+- The welcome message only appears for interactive shells.
+- Safe to reload with the `reload` alias.
 
 ---
 
 ## License
 
-This `.bashrc` configuration is open for personal use and modification. No warranties provided.
+This configuration is provided for personal use and modification. No warranty or official support is provided.
 
 ---
 
-*Enjoy your enhanced Bash shell!*
+Enjoy a cleaner, more useful Bash prompt.
+
